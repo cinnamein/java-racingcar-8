@@ -25,5 +25,7 @@ public class Orchestrator {
         String carNamesInput = consoleView.getCarNamesInput();
         inputValidator.validateInputString(carNamesInput);
         List<String> carNames = stringParser.parseCarNames(carNamesInput);
+        int attemptsCount = consoleView.getAttemptsCountInput();
+        inputValidator.validateAttemptsCount(attemptsCount);
     }
 }
