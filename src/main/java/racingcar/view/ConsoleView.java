@@ -15,4 +15,8 @@ public class ConsoleView {
         System.out.println("실행 결과");
         return attemptsCount;
     }
+
+    public void printPosition(String movementStatus) {
+        System.out.println(movementStatus);
+    }
 }
