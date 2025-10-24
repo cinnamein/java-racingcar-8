@@ -40,6 +40,7 @@ public class Orchestrator {
         inputValidator.validateAttemptsCount(attemptsCount);
         for (int i = 0; i < attemptsCount; i++) {
             movementCalculator.playGame(cars);
+            consoleView.printPosition(cars);
         }
     }
 }

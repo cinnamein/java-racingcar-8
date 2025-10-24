@@ -1,6 +1,8 @@
 package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import java.util.List;
+import racingcar.model.Car;
 
 public class ConsoleView {
 
@@ -16,7 +18,10 @@ public class ConsoleView {
         return attemptsCount;
     }
 
-    public void printPosition(String movementStatus) {
-        System.out.println(movementStatus);
+    public void printPosition(List<Car> cars) {
+        for (Car car : cars) {
+            System.out.println(car.getPositionString());
+        }
+        System.out.println();
     }
 }
