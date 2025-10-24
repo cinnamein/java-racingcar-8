@@ -24,4 +24,18 @@ public class ConsoleView {
         }
         System.out.println();
     }
+
+    public void printWinner(List<String> winners) {
+        String output = formatWinnerOutput(winners);
+        System.out.println(output);
+        Console.close();
+    }
+
+    private String formatWinnerOutput(List<String> winners) {
+        StringBuilder result = new StringBuilder("최종 우승자 : ");
+        for (String winner : winners) {
+            result.append(winner).append(", ");
+        }
+        return result.substring(0, result.length() - 2);
+    }
 }

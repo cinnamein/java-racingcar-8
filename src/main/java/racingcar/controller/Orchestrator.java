@@ -48,5 +48,6 @@ public class Orchestrator {
         }
 
         List<String> winners = determineResult.getWinners(cars);
+        consoleView.printWinner(winners);
     }
 }
