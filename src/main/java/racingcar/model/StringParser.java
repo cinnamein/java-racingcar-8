@@ -1,16 +1,24 @@
 package racingcar.model;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class StringParser {
 
     public List<String> parseCarNames(String carNamesInput) {
         List<String> carNames = Arrays.asList(carNamesInput.split(",", -1));
+        validateDuplication(carNames);
         for (String name : carNames) {
             validateCarName(name);
         }
         return carNames;
+    }
+
+    private void validateDuplication(List<String> carNames) {
+        if (carNames.size() != new HashSet<>(carNames).size()) {
+            throw new IllegalArgumentException("자동차 이름은 중복될 수 없습니다.");
+        }
     }
 
     private void validateCarName(String carName) {
