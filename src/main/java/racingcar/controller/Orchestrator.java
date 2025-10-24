@@ -1,12 +1,12 @@
 package racingcar.controller;
 
 import java.util.List;
-import racingcar.model.Car;
-import racingcar.model.CarFactory;
-import racingcar.model.DetermineResult;
-import racingcar.model.InputValidator;
-import racingcar.model.MovementCalculator;
-import racingcar.model.StringParser;
+import racingcar.model.domain.Car;
+import racingcar.model.domain.CarFactory;
+import racingcar.model.domain.DetermineResult;
+import racingcar.model.util.InputValidator;
+import racingcar.model.domain.MovementCalculator;
+import racingcar.model.util.StringParser;
 import racingcar.view.ConsoleView;
 
 public class Orchestrator {

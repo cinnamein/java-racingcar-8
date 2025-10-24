@@ -1,11 +1,11 @@
 package racingcar;
 
 import racingcar.controller.Orchestrator;
-import racingcar.model.CarFactory;
-import racingcar.model.DetermineResult;
-import racingcar.model.InputValidator;
-import racingcar.model.MovementCalculator;
-import racingcar.model.StringParser;
+import racingcar.model.domain.CarFactory;
+import racingcar.model.domain.DetermineResult;
+import racingcar.model.util.InputValidator;
+import racingcar.model.domain.MovementCalculator;
+import racingcar.model.util.StringParser;
 import racingcar.view.ConsoleView;
 
 public class Application {
