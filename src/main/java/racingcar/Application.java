@@ -1,7 +1,9 @@
 package racingcar;
 
 import racingcar.controller.Orchestrator;
+import racingcar.model.CarFactory;
 import racingcar.model.InputValidator;
+import racingcar.model.MovementCalculator;
 import racingcar.model.StringParser;
 import racingcar.view.ConsoleView;
 
@@ -10,7 +12,9 @@ public class Application {
         Orchestrator orchestrator = new Orchestrator(
                 new ConsoleView(),
                 new InputValidator(),
-                new StringParser()
+                new StringParser(),
+                new CarFactory(),
+                new MovementCalculator()
         );
         orchestrator.playRacingGame();
     }

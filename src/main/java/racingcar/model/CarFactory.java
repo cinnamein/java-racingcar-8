@@ -1,0 +1,13 @@
+package racingcar.model;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class CarFactory {
+
+    public List<Car> setupCars(List<String> carNames) {
+        return carNames.stream()
+                .map(Car::new)
+                .collect(Collectors.toList());
+    }
+}
