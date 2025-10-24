@@ -2,6 +2,7 @@ package racingcar;
 
 import racingcar.controller.Orchestrator;
 import racingcar.model.CarFactory;
+import racingcar.model.DetermineResult;
 import racingcar.model.InputValidator;
 import racingcar.model.MovementCalculator;
 import racingcar.model.StringParser;
@@ -14,7 +15,8 @@ public class Application {
                 new InputValidator(),
                 new StringParser(),
                 new CarFactory(),
-                new MovementCalculator()
+                new MovementCalculator(),
+                new DetermineResult()
         );
         orchestrator.playRacingGame();
     }

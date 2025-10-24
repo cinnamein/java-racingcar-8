@@ -3,6 +3,7 @@ package racingcar.controller;
 import java.util.List;
 import racingcar.model.Car;
 import racingcar.model.CarFactory;
+import racingcar.model.DetermineResult;
 import racingcar.model.InputValidator;
 import racingcar.model.MovementCalculator;
 import racingcar.model.StringParser;
@@ -15,19 +16,22 @@ public class Orchestrator {
     private final StringParser stringParser;
     private final CarFactory carFactory;
     private final MovementCalculator movementCalculator;
+    private final DetermineResult determineResult;
 
     public Orchestrator(
             ConsoleView consoleView,
             InputValidator inputValidator,
             StringParser stringParser,
             CarFactory carFactory,
-            MovementCalculator movementCalculator
+            MovementCalculator movementCalculator,
+            DetermineResult determineResult
     ) {
         this.consoleView = consoleView;
         this.inputValidator = inputValidator;
         this.stringParser = stringParser;
         this.carFactory = carFactory;
         this.movementCalculator = movementCalculator;
+        this.determineResult = determineResult;
     }
 
     public void playRacingGame() {
@@ -42,5 +46,7 @@ public class Orchestrator {
             movementCalculator.playGame(cars);
             consoleView.printPosition(cars);
         }
+
+        List<String> winners = determineResult.getWinners(cars);
     }
 }
