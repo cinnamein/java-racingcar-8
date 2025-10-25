@@ -12,7 +12,7 @@ public class InputValidator {
     }
 
     public void validateAttemptsCount(int attemptCount) {
-        if (attemptCount > 2147483647 || attemptCount <= 0) {
+        if (attemptCount <= 0) {
             throw new IllegalArgumentException("시행 횟수는 2147483647 이하의 자연수만 가능합니다.");
         }
     }

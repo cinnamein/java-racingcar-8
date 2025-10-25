@@ -40,7 +40,8 @@ public class Orchestrator {
         List<String> carNames = stringParser.parseCarNames(carNamesInput);
         List<Car> cars = carFactory.setupCars(carNames);
 
-        int attemptsCount = consoleView.getAttemptsCountInput();
+        String attemptsCountString = consoleView.getAttemptsCountInput();
+        int attemptsCount = stringParser.parseAttemptsCount(attemptsCountString);
         inputValidator.validateAttemptsCount(attemptsCount);
         for (int i = 0; i < attemptsCount; i++) {
             movementCalculator.playGame(cars);

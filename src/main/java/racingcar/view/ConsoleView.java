@@ -11,9 +11,9 @@ public class ConsoleView {
         return Console.readLine();
     }
 
-    public int getAttemptsCountInput() {
+    public String getAttemptsCountInput() {
         System.out.println("시도할 횟수는 몇 회인가요?");
-        int attemptsCount = Integer.parseInt(Console.readLine());
+        String attemptsCount = Console.readLine();
         System.out.println("실행 결과");
         return attemptsCount;
     }
