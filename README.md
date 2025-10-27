@@ -1,4 +1,4 @@
-# java-racingcar-precourse
+# java-racingcar-precourse [![Java CI with Gradle](https://github.com/cinnamein/java-racingcar-8/actions/workflows/gradle-ci.yml/badge.svg?branch=cinnamein)](https://github.com/cinnamein/java-racingcar-8/actions/workflows/gradle-ci.yml)
 
 > 본 프로젝트는 우아한테크코스 8기 프리코스 과정의 2차 과제로, 주어진 요구사항에 따라 자동차 경주 게임을 구현하는 것을 목표로 합니다.
 
